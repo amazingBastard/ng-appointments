@@ -1,12 +1,12 @@
 {
-  "name": "AngularJS Modular Demo",
+  "name": "AngularJS Calendar Appointments",
   "version": "0.0.1",
-  "description": "AngularJS Modular Demo",
+  "description": "AngularJS Calendar Appointments Demo",
   "authors": [
-    "John Papa"
+    "Damir Vazgird"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/johnpapa/ng-demos",
+  "homepage": "https://github.com/amazingBastard/ng-appointments",
   "ignore": [
     "**/.*",
     "node_modules",
