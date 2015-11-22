@@ -13,8 +13,8 @@
         /*
          * 3rd Party modules
          */
-        'mwl.calendar',
         'ui.bootstrap',
+        'ui.calendar',
         'ngplus'
     ]);
 })();
