@@ -4,23 +4,7 @@
             <div class="row">
                 <div class="col-xs-12">
                     <h2 class="title">{{vm.title}}</h2>
-                    <mwl-calendar
-                            events="vm.calendarEvents"
-                            view="vm.calendarView"
-                            view-title="vm.calendarTitle"
-                            current-day="vm.calendarDay"
-                            on-event-click="vm.eventClicked(calendarEvent)"
-                            on-event-times-changed="vm.eventTimesChanged(calendarEvent); calendarEvent.startsAt = calendarNewEventStart; calendarEvent.endsAt = calendarNewEventEnd"
-                            edit-event-html="'<i class=\'glyphicon glyphicon-pencil\'></i>'"
-                            delete-event-html="'<i class=\'glyphicon glyphicon-remove\'></i>'"
-                            on-edit-event-click="vm.eventEdited(calendarEvent)"
-                            on-delete-event-click="vm.eventDeleted(calendarEvent)"
-                            cell-is-open="vm.isCellOpen"
-                            day-view-start="06:00"
-                            day-view-end="22:00"
-                            day-view-split="30"
-                            cell-modifier="vm.modifyCell(calendarCell)">
-                    </mwl-calendar>
+                    calendar here
                 </div>
             </div>
         </div>
