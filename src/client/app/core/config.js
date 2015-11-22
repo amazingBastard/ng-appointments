@@ -13,7 +13,7 @@
 
     var config = {
         appErrorPrefix: '[NG-Modular Error] ', //Configure the exceptionHandler decorator
-        appTitle: 'Angular Modular Demo',
+        appTitle: 'Angular Appointments Demo',
         version: '1.0.0'
     };
 
