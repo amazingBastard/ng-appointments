@@ -18,7 +18,7 @@
         };
         vm.avengerCount = 0;
         vm.avengers = [];
-        vm.title = 'Dashboard';
+        vm.title = 'Appointments';
 
         activate();
 
