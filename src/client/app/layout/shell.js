@@ -5,7 +5,7 @@
         .module('app.layout')
         .controller('Shell', Shell);
 
-    Shell.$inject = ['$timeout', 'config', 'logger'];
+    Shell.$inject = ['config', 'logger'];
 
     function Shell(config, logger) {
         /*jshint validthis: true */

@@ -55,7 +55,7 @@
             return $q.when(clients);
         }
 
-        function getAppointmentDate() {
+        function getAppointmentServices() {
             var services = [
                 {name: 'BLOWOUT', id: '185ee8bd-b58c-4b66-91bb-eeea98b3db22'},
                 {name: 'MAKEUP W/LASHES', id: '185ee8bd-b58c-4b66-91bb-eeea98b3db23'}
@@ -68,7 +68,7 @@
                 {startDateTime: 1446123600, id: '320aa6a8-0457-4d03-a4f6-f3f11980ec13'},
                 {startDateTime: 1446134400, id: '320aa6a8-0457-4d03-a4f6-f3f11980ec12'}
             ];
-            return $q.when(services);
+            return $q.when(dates);
         }
 
         function getAppointmentStatus() {
@@ -76,7 +76,7 @@
                 {isCanceled: false, id: '320aa6a8-0457-4d03-a4f6-f3f11980ec13'},
                 {isCanceled: true, id: '320aa6a8-0457-4d03-a4f6-f3f11980ec12'}
             ];
-            return $q.when(services);
+            return $q.when(status);
         }
 
         function prime() {
