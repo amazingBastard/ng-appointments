@@ -25,7 +25,7 @@ module.exports = function (config) {
             './bower_components/angular-sanitize/angular-sanitize.js',
             './bower_components/bootstrap/dist/js/bootstrap.js',
             './bower_components/toastr/toastr.js',
-            './bower_components/moment/moment.js'
+            './bower_components/moment/moment.js',
 
             './src/client/app/app.module.js',
             './src/client/app/**/*.module.js',

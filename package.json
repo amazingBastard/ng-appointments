@@ -2,7 +2,7 @@
   "name": "ng-appointments",
   "private": true,
   "version": "0.0.1",
-  "description": "A demo for calendar appointments in angular",
+  "description": "A demo for calendar appointments with angular",
   "authors": [
     "Damir Vazgird"
   ],
