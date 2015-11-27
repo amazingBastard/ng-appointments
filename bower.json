@@ -25,6 +25,8 @@
     "angular-mocks": "~1.4.0",
     "angular-animate": "~1.4.0",
     "angular-sanitize": "~1.4.0",
+    "angular.less": "~0.0.3",
+    "toastr": "~2.0.1",
     "jquery": "~2.1.0",
     "moment": "~2.6.0",
     "bootstrap": "~3.1.1",
