@@ -1,37 +1,15 @@
 {
-  "name": "AngularJS Calendar Appointments",
+  "name": "ng-appointments",
+  "description": "A demo for calendar appointments in angular",
   "version": "0.0.1",
-  "description": "AngularJS Calendar Appointments Demo",
-  "authors": [
-    "Damir Vazgird"
-  ],
-  "license": "MIT",
   "homepage": "https://github.com/amazingBastard/ng-appointments",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
-  "devDependencies": {
-    "angular-mocks": "~1.2.24"
-  },
+  "license": "MIT",
+  "private": true,
   "dependencies": {
-    "angular": "~1.2.24",
-    "toastr": "~2.0.1",
-    "bootstrap": "~3.1.1",
-    "moment": "~2.6.0",
-    "jquery": "~2.1.0",
-    "angular-route": "~1.2.24",
-    "angular-animate": "~1.2.24",
-    "angular-sanitize": "~1.2.24",
-    "font-awesome": "~4.0.3",
-    "extras.angular.plus": "~0.9.0",
-    "angular-bootstrap": "~0.14.3",
-    "interact": "~1.2.6",
-    "angular-touch": "~1.4.8",
-    "angular-ui-calendar": "~1.0.1",
-    "fullcalendar": "~2.4.0"
+    "angular": "~1.4.0",
+    "angular-route": "~1.4.0",
+    "angular-loader": "~1.4.0",
+    "angular-mocks": "~1.4.0",
+    "html5-boilerplate": "~5.2.0"
   }
 }
