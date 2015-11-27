@@ -1,5 +1,11 @@
 /* @TODO: break up into modules/elements/helpers etc... */
 
+/* header */
+
+.brand-title {
+    font-size: 1.5rem;
+}
+
 /* views */
 
 .view {

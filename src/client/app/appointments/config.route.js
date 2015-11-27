@@ -23,7 +23,7 @@
                     title: 'appointments',
                     settings: {
                         nav: 1,
-                        content: '<i class="fa fa-calendar"></i> Appointments'
+                        content: '<i class="fa fa-calendar"></i>'
                     }
                 }
             }
