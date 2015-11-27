@@ -16,7 +16,7 @@
             getAppointmentDates: getAppointmentDates,
             getAppointmentStatus: getAppointmentStatus,
             getAppointmentsCount: getAppointmentsCount,
-            getAppointments: getAvengers,
+            getAppointments: getAppointments,
             ready: ready
         };
 
