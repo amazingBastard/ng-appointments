@@ -1,31 +1,12 @@
-<div class="btn-group-vertical calendar-view-buttons">
-    <label class="btn btn-primary" ng-model="vm.calendarView" uib-btn-radio="'year'">
-        Year
-    </label>
-    <label class="btn btn-primary" ng-model="vm.calendarView" uib-btn-radio="'month'">
-        Month
-    </label>
-    <label class="btn btn-primary" ng-model="vm.calendarView" uib-btn-radio="'week'">
-        Week
-    </label>
-    <label class="btn btn-primary" ng-model="vm.calendarView" uib-btn-radio="'day'">
-        Day
-    </label>
-</div>
-
-<div class="btn-group calendar-date-buttons">
-    <button class="btn btn-primary" mwl-date-modifier date="vm.calendarDay" decrement="vm.calendarView">
-        Previous
+<div class="widget-header">
+    <button class="btn btn-primary btn-prev" mwl-date-modifier date="vm.calendarDay" decrement="vm.calendarView">
+        <i class="fa fa-chevron-left"></i>
     </button>
-    <button class="btn btn-default" mwl-date-modifier date="vm.calendarDay" set-to-today>
-        Today
-    </button>
-    <button class="btn btn-primary" mwl-date-modifier date="vm.calendarDay" increment="vm.calendarView">
-        Next
+    <h2 class="widget-title">{{ vm.calendarTitle }}</h2>
+    <button class="btn btn-primary btn-next" mwl-date-modifier date="vm.calendarDay" increment="vm.calendarView">
+        <i class="fa fa-chevron-right"></i>
     </button>
 </div>
-
-<h2 class="text-center calendar-title">{{ vm.calendarTitle }}</h2>
 
 <mwl-calendar
         view="vm.calendarView"
@@ -33,3 +14,22 @@
         events="vm.appointments"
         view-title="vm.calendarTitle">
 </mwl-calendar>
+
+<button class="btn btn-default btn-today" mwl-date-modifier date="vm.calendarDay" set-to-today>
+    <i class="fa fa-history"></i>
+</button>
+
+<div class="btn-group-vertical calendar-view-buttons">
+    <label class="btn btn-default" ng-model="vm.calendarView" uib-btn-radio="'year'">
+        <i class="fa fa-th-large"></i> Year
+    </label>
+    <label class="btn btn-default" ng-model="vm.calendarView" uib-btn-radio="'month'">
+        <i class="fa fa-th"></i> Month
+    </label>
+    <label class="btn btn-default" ng-model="vm.calendarView" uib-btn-radio="'week'">
+        <i class="fa fa-square"></i> Week
+    </label>
+    <label class="btn btn-default" ng-model="vm.calendarView" uib-btn-radio="'day'">
+        <i class="fa fa-th-list"></i> Day
+    </label>
+</div>
