@@ -17,6 +17,11 @@
         vm.calendarView = 'week';
         vm.calendarDay = new Date();
         vm.calendarTitle = 'Appointments';
+        vm.editEventIcon = '<\i class=\'fa fa-pencil\'\></i>';
+        vm.deleteEventIcon = '<\i class=\'fa fa-times\'\></i>';
+        vm.dayViewStart = '06:00';
+        vm.dayViewEnd = '22:00';
+        vm.dayViewSplit = '30';
 
         activate();
 

@@ -1,9 +1,9 @@
 <div class="widget-header">
-    <button class="btn btn-primary btn-prev" mwl-date-modifier date="vm.calendarDay" decrement="vm.calendarView">
+    <button class="btn btn-default btn-prev" mwl-date-modifier date="vm.calendarDay" decrement="vm.calendarView">
         <i class="fa fa-chevron-left"></i>
     </button>
     <h2 class="widget-title">{{ vm.calendarTitle }}</h2>
-    <button class="btn btn-primary btn-next" mwl-date-modifier date="vm.calendarDay" increment="vm.calendarView">
+    <button class="btn btn-default btn-next" mwl-date-modifier date="vm.calendarDay" increment="vm.calendarView">
         <i class="fa fa-chevron-right"></i>
     </button>
 </div>
@@ -12,7 +12,18 @@
         view="vm.calendarView"
         current-day="vm.calendarDay"
         events="vm.appointments"
-        view-title="vm.calendarTitle">
+        view-title="vm.calendarTitle"
+        on-event-click="vm.eventClicked(calendarEvent)"
+        on-event-times-changed="vm.eventTimesChanged(calendarEvent); calendarEvent.startsAt = calendarNewEventStart; calendarEvent.endsAt = calendarNewEventEnd"
+        edit-event-html="vm.editEventIcon"
+        delete-event-html="vm.deleteEventIcon"
+        on-edit-event-click="vm.eventEdited(calendarEvent)"
+        on-delete-event-click="vm.eventDeleted(calendarEvent)"
+        cell-is-open="vm.isCellOpen"
+        day-view-start="vm.dayViewStart"
+        day-view-end="vm.dayViewEnd"
+        day-view-split="vm.dayViewSplit"
+        cell-modifier="vm.modifyCell(calendarCell)">
 </mwl-calendar>
 
 <button class="btn btn-default btn-today" mwl-date-modifier date="vm.calendarDay" set-to-today>
