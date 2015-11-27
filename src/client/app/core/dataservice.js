@@ -6,15 +6,12 @@
         .factory('dataservice', dataservice);
 
     /* @ngInject */
-    function dataservice($http, $location, $q, exception, logger) {
+    function dataservice($http, $location, $q, exception, logger, moment) {
         var isPrimed = false;
         var primePromise;
 
         var service = {
-            getAppointmentClients: getAppointmentClients,
-            getAppointmentServices: getAppointmentServices,
-            getAppointmentDates: getAppointmentDates,
-            getAppointmentStatus: getAppointmentStatus,
+            generateAppointments: generateAppointments,
             getAppointmentsCount: getAppointmentsCount,
             getAppointments: getAppointments,
             ready: ready
@@ -37,46 +34,36 @@
 
         function getAppointmentsCount() {
             var count = 0;
-            return getAppointmentClients()
-                .then(getAppointmentClientsComplete)
+            return generateAppointments()
+                .then(getAppointmentsComplete)
                 .catch(exception.catcher('XHR Failed for getAppointmentsCount'));
 
-            function getAppointmentClientsComplete (data) {
+            function getAppointmentsComplete (data) {
                 count = data.length;
                 return $q.when(count);
             }
         }
 
-        function getAppointmentClients() {
-            var clients = [
-                {name: 'Glamsquad1 Client', id: '4a6d6b81-0cf7-48e5-9251-1d243e20d9f0'},
-                {name: 'Glamsquad2 Client', id: '4a6d6b81-0cf7-48e5-9251-1d243e20d9f9'}
+        function generateAppointments() {
+            var appointments = [
+                {
+                    id: '4a6d6b81-0cf7-48e5-9251-1d243e20d9f0',
+                    title: 'Chris Canning\'s BLOWOUT',
+                    type: 'important',
+                    startsAt: moment().subtract(2, 'day').toDate(),
+                    draggable: true,
+                    resizable: true
+                },
+                {
+                    id: '4a6d6b81-0cf7-48e5-9251-1d243e20d9f9',
+                    title: 'MAKEUP W/LASHES for Christina Ray',
+                    type: 'info',
+                    startsAt: moment().subtract(1, 'day').toDate(),
+                    draggable: true,
+                    resizable: true
+                }
             ];
-            return $q.when(clients);
-        }
-
-        function getAppointmentServices() {
-            var services = [
-                {name: 'BLOWOUT', id: '185ee8bd-b58c-4b66-91bb-eeea98b3db22'},
-                {name: 'MAKEUP W/LASHES', id: '185ee8bd-b58c-4b66-91bb-eeea98b3db23'}
-            ];
-            return $q.when(services);
-        }
-
-        function getAppointmentDates() {
-            var dates = [
-                {startDateTime: 1446123600, id: '320aa6a8-0457-4d03-a4f6-f3f11980ec13'},
-                {startDateTime: 1446134400, id: '320aa6a8-0457-4d03-a4f6-f3f11980ec12'}
-            ];
-            return $q.when(dates);
-        }
-
-        function getAppointmentStatus() {
-            var status = [
-                {isCanceled: false, id: '320aa6a8-0457-4d03-a4f6-f3f11980ec13'},
-                {isCanceled: true, id: '320aa6a8-0457-4d03-a4f6-f3f11980ec12'}
-            ];
-            return $q.when(status);
+            return $q.when(appointments);
         }
 
         function prime() {

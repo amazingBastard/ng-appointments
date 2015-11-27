@@ -1,44 +1,74 @@
-(function() {
+(function () {
     'use strict';
 
     angular
         .module('app.appointments')
         .controller('Appointments', Appointments);
 
-    Appointments.$inject = ['$q', 'dataservice', 'logger'];
+    Appointments.$inject = ['$q', 'dataservice', 'logger', 'moment'];
 
-    function Appointments($q, dataservice, logger) {
+    function Appointments($q, dataservice, logger, moment) {
 
         /*jshint validthis: true */
         var vm = this;
 
         vm.appointmentsCount = 0;
         vm.appointments = [];
-        vm.title = 'Appointments';
+        vm.calendarView = 'week';
+        vm.calendarDay = new Date();
+        vm.calendarTitle = 'Appointments';
 
         activate();
 
         function activate() {
-            var promises = [getAppointmentsCount(), getAppointmentClients()];
+            var promises = [generateAppointments(), getAppointmentsCount()];
 //            Using a resolver on all routes or dataservice.ready in every controller
 //            return dataservice.ready(promises).then(function(){
-            return $q.all(promises).then(function() {
+            return $q.all(promises).then(function () {
                 logger.info('Activated Appointments View');
             });
         }
 
         function getAppointmentsCount() {
-            return dataservice.getAppointmentsCount().then(function(data) {
+            return dataservice.getAppointmentsCount().then(function (data) {
                 vm.appointmentsCount = data;
                 return vm.appointmentsCount;
             });
         }
 
-        function getAppointmentClients() {
-            return dataservice.getAppointmentClients().then(function(data) {
+        // @TODO: use getAppointments() dataservice
+
+        function generateAppointments() {
+            return dataservice.generateAppointments().then(function (data) {
                 vm.appointments = data;
                 return vm.appointments;
             });
         }
+
+        function showModal(action, event) {
+            console.log('open modal ' + event);
+        }
+
+        vm.eventClicked = function(event) {
+            showModal('Clicked', event);
+        };
+
+        vm.eventEdited = function(event) {
+            showModal('Edited', event);
+        };
+
+        vm.eventDeleted = function(event) {
+            showModal('Deleted', event);
+        };
+
+        vm.eventTimesChanged = function(event) {
+            showModal('Dropped or resized', event);
+        };
+
+        vm.toggle = function($event, field, event) {
+            $event.preventDefault();
+            $event.stopPropagation();
+            event[field] = !event[field];
+        };
     }
 })();

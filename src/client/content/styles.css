@@ -1,2 +1,7 @@
-// add styles here - feel free to break down stylesheets into components
+/* @TODO: break up into modules/elements/helpers etc... */
 
+/* views */
+
+.view {
+    margin: 5em auto;
+}
