@@ -1,0 +1,262 @@
+[
+  {
+    "id": "320aa6a8-0457-4d03-a4f6-f3f11980ec12",
+    "startDateTime": 1446134400,
+    "isCanceled": false,
+    "createdAt": 1446079258,
+    "updatedAt": 1446079258,
+    "addressId": "3e25e2e2-b16e-48aa-9b0b-2a590431919e",
+    "ownerId": "4a6d6b81-0cf7-48e5-9251-1d243e20d9f9",
+    "address": {
+      "id": "3e25e2e2-b16e-48aa-9b0b-2a590431919e",
+      "street": "8320 Blackburn Ave",
+      "apartment": "",
+      "city": "Los Angeles",
+      "state": "CA",
+      "zip": "90048",
+      "createdAt": 1446078405,
+      "updatedAt": 1446079247,
+      "marketId": "52388e5b-b1b9-4854-9ed9-df764d7003fb",
+      "market": {
+        "id": "52388e5b-b1b9-4854-9ed9-df764d7003fb",
+        "name": "Los Angeles",
+        "shortName": "LA",
+        "isEnabled": true,
+        "smsRemindersEnabled": false,
+        "timezone": "America/Los_Angeles",
+        "cancellationPolicy": "< 4 Hour Notice: You will be charged 100% of the total appointment cost",
+        "serviceTax": "0",
+        "productTax": "0",
+        "tip": "0.2",
+        "addressCompletionOptions": {
+          "lat": 34.033588,
+          "long": -118.35954699999999,
+          "radius": 15,
+          "NW": {
+            "lat": 34.193619,
+            "long": -118.57069
+          },
+          "SE": {
+            "lat": 33.731752,
+            "long": -118.024807
+          }
+        },
+        "travelTimeCalculationOptions": {
+          "type": "driving",
+          "limits": {
+            "total": 30
+          },
+          "options": "&avoid=highways"
+        },
+        "createdAt": 1439899200,
+        "updatedAt": 1446213600
+      }
+    },
+    "client": {
+      "id": "4a6d6b81-0cf7-48e5-9251-1d243e20d9f9",
+      "email": "client@glamsquad.com",
+      "nameFirst": "Glamsquad",
+      "nameLast": "Client",
+      "fullName": "Glamsquad Client",
+      "referralCode": "glamclient",
+      "referralUrl": "http://i-dev.getgl.am/glamclient",
+      "isAdmin": false,
+      "isProvider": false,
+      "isClientService": false,
+      "isOps": false,
+      "isVIP": false,
+      "credits": 0,
+      "bookerEmployeeId": "334894",
+      "questionnaireResponses": {},
+      "createdAt": 1439901615,
+      "updatedAt": 1446205240,
+      "defaultMarketId": "e5c43ab2-0dfc-44c9-a620-755005387327"
+    },
+    "appointmentServices": [
+      {
+        "id": "0db824c9-3ee5-4c6e-804e-c12a9199d9d8",
+        "createdAt": 1446079258,
+        "updatedAt": 1446079258,
+        "appointmentId": "320aa6a8-0457-4d03-a4f6-f3f11980ec12",
+        "serviceId": "185ee8bd-b58c-4b66-91bb-eeea98b3db22",
+        "clientId": "4a6d6b81-0cf7-48e5-9251-1d243e20d9f9",
+        "service": {
+          "id": "185ee8bd-b58c-4b66-91bb-eeea98b3db22",
+          "name": "BLOWOUT",
+          "description": "Blowout",
+          "duration": 45,
+          "price": 50,
+          "isAddOn": false,
+          "image": "services/blowout.jpeg",
+          "serviceTypeName": "Hair",
+          "createdAt": 1439903100,
+          "updatedAt": 1446210300,
+          "serviceTypeId": "1ab571ab-2e40-497c-8799-b65e13d8af7f",
+          "serviceType": {
+            "id": "1ab571ab-2e40-497c-8799-b65e13d8af7f",
+            "name": "Hair",
+            "priority": 0,
+            "kinveyId": "29",
+            "createdAt": 1439828608,
+            "updatedAt": 1439828608
+          },
+          "provider": {
+            "id": "4a6d6b81-0cf7-48e5-9251-1d243e20d9f9",
+            "email": "provider@glamsquad.com",
+            "nameFirst": "Glamsquad",
+            "nameLast": "Provider",
+            "fullName": "Glamsquad Provider",
+            "referralCode": "glamprovider",
+            "referralUrl": "http://i-dev.getgl.am/glamprovider",
+            "isAdmin": false,
+            "isProvider": false,
+            "isClientService": false,
+            "isOps": false,
+            "isVIP": false,
+            "credits": 0,
+            "bookerEmployeeId": "123456",
+            "photoUrls": {
+              "small": "https://s3-us-west-2.amazonaws.com/starbase-develop.glamsquad.com%2Fphotos/c8c0d080-09a1-45bf-b089-efd3c7b9dacb-small.jpeg",
+              "medium": "https://s3-us-west-2.amazonaws.com/starbase-develop.glamsquad.com%2Fphotos/c8c0d080-09a1-45bf-b089-efd3c7b9dacb-medium.jpeg",
+              "large": "https://s3-us-west-2.amazonaws.com/starbase-develop.glamsquad.com%2Fphotos/c8c0d080-09a1-45bf-b089-efd3c7b9dacb-large.jpeg"
+            },
+            "questionnaireResponses": {},
+            "createdAt": 1439901615,
+            "updatedAt": 1446205240,
+            "defaultMarketId": "e5c43ab2-0dfc-44c9-a620-755005387327"
+          }
+        }
+      }
+    ]
+  },
+  {
+    "id": "320aa6a8-0457-4d03-a4f6-f3f11980ec13",
+    "startDateTime": 1446123600,
+    "isCanceled": true,
+    "createdAt": 1446079258,
+    "updatedAt": 1446079258,
+    "addressId": "3e25e2e2-b16e-48aa-9b0b-2a590431919f",
+    "ownerId": "4a6d6b81-0cf7-48e5-9251-1d243e20d9f0",
+    "address": {
+      "id": "3e25e2e2-b16e-48aa-9b0b-2a590431919f",
+      "street": "10 Rodeo Drive",
+      "apartment": "",
+      "city": "Los Angeles",
+      "state": "CA",
+      "zip": "90210",
+      "createdAt": 1446078405,
+      "updatedAt": 1446079247,
+      "marketId": "52388e5b-b1b9-4854-9ed9-df764d7003fb",
+      "market": {
+        "id": "52388e5b-b1b9-4854-9ed9-df764d7003fb",
+        "name": "Los Angeles",
+        "shortName": "LA",
+        "isEnabled": true,
+        "smsRemindersEnabled": false,
+        "timezone": "America/Los_Angeles",
+        "cancellationPolicy": "< 4 Hour Notice: You will be charged 100% of the total appointment cost",
+        "serviceTax": "0",
+        "productTax": "0",
+        "tip": "0.2",
+        "addressCompletionOptions": {
+          "lat": 34.033588,
+          "long": -118.35954699999999,
+          "radius": 15,
+          "NW": {
+            "lat": 34.193619,
+            "long": -118.57069
+          },
+          "SE": {
+            "lat": 33.731752,
+            "long": -118.024807
+          }
+        },
+        "travelTimeCalculationOptions": {
+          "type": "driving",
+          "limits": {
+            "total": 30
+          },
+          "options": "&avoid=highways"
+        },
+        "createdAt": 1439899200,
+        "updatedAt": 1446213600
+      }
+    },
+    "client": {
+      "id": "4a6d6b81-0cf7-48e5-9251-1d243e20d9f0",
+      "email": "client2@glamsquad.com",
+      "nameFirst": "Glamsquad",
+      "nameLast": "Client2",
+      "fullName": "Glamsquad2 Client",
+      "referralCode": "glamclient2",
+      "referralUrl": "http://i-dev.getgl.am/glamclient2",
+      "isAdmin": false,
+      "isProvider": false,
+      "isClientService": false,
+      "isOps": false,
+      "isVIP": true,
+      "credits": 0,
+      "bookerEmployeeId": "334894",
+      "questionnaireResponses": {},
+      "createdAt": 1439901615,
+      "updatedAt": 1446205240,
+      "defaultMarketId": "e5c43ab2-0dfc-44c9-a620-755005387327"
+    },
+    "appointmentServices": [
+      {
+        "id": "0db824c9-3ee5-4c6e-804e-c12a9199d9d9",
+        "createdAt": 1446079258,
+        "updatedAt": 1446079258,
+        "appointmentId": "320aa6a8-0457-4d03-a4f6-f3f11980ec12",
+        "serviceId": "185ee8bd-b58c-4b66-91bb-eeea98b3db22",
+        "clientId": "4a6d6b81-0cf7-48e5-9251-1d243e20d9f9",
+        "service": {
+          "id": "185ee8bd-b58c-4b66-91bb-eeea98b3db23",
+          "name": "MAKEUP W/LASHES",
+          "description": "Makeup w/Lashes",
+          "duration": 60,
+          "price": 75,
+          "isAddOn": false,
+          "image": "services/makeup.jpeg",
+          "serviceTypeName": "Makeup",
+          "createdAt": 1439903100,
+          "updatedAt": 1446210300,
+          "serviceTypeId": "1ab571ab-2e40-497c-8799-b65e13d8af7g",
+          "serviceType": {
+            "id": "1ab571ab-2e40-497c-8799-b65e13d8af7g",
+            "name": "Makeup",
+            "priority": 0,
+            "kinveyId": "29",
+            "createdAt": 1439828608,
+            "updatedAt": 1439828608
+          },
+          "provider": {
+            "id": "4a6d6b81-0cf7-48e5-9251-1d243e20d9f0",
+            "email": "makeupprovider@glamsquad.com",
+            "nameFirst": "Makeup",
+            "nameLast": "Provider",
+            "fullName": "Makeup Provider",
+            "referralCode": "makeupprovider",
+            "referralUrl": "http://i-dev.getgl.am/makeupprovider",
+            "isAdmin": false,
+            "isProvider": false,
+            "isClientService": false,
+            "isOps": false,
+            "isVIP": false,
+            "credits": 0,
+            "bookerEmployeeId": "123456",
+            "photoUrls": {
+              "small": "https://s3-us-west-2.amazonaws.com/starbase-develop.glamsquad.com%2Fphotos/c8c0d080-09a1-45bf-b089-efd3c7b9dacb-small.jpeg",
+              "medium": "https://s3-us-west-2.amazonaws.com/starbase-develop.glamsquad.com%2Fphotos/c8c0d080-09a1-45bf-b089-efd3c7b9dacb-medium.jpeg",
+              "large": "https://s3-us-west-2.amazonaws.com/starbase-develop.glamsquad.com%2Fphotos/c8c0d080-09a1-45bf-b089-efd3c7b9dacb-large.jpeg"
+            },
+            "questionnaireResponses": {},
+            "createdAt": 1439901615,
+            "updatedAt": 1446205240,
+            "defaultMarketId": "e5c43ab2-0dfc-44c9-a620-755005387327"
+          }
+        }
+      }
+    ]
+  }
+]
