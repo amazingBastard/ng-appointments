@@ -1,30 +1,7 @@
 <div id="appointmentsView" class="view container">
     <div class="row">
         <div class="col-xs-12">
-            <h2 class="text-center">{{ vm.calendarTitle }}</h2>
-            <div class="btn-group">
-                <button class="btn btn-primary" mwl-date-modifier date="vm.calendarDay" decrement="vm.calendarView">
-                    Previous
-                </button>
-                <button class="btn btn-default" mwl-date-modifier date="vm.calendarDay" set-to-today>
-                    Today
-                </button>
-                <button class="btn btn-primary" mwl-date-modifier date="vm.calendarDay" increment="vm.calendarView">
-                    Next
-                </button>
-            </div>
-            <mwl-calendar
-                    view="vm.calendarView"
-                    current-day="vm.calendarDay"
-                    events="vm.appointments"
-                    view-title="vm.calendarTitle">
-            </mwl-calendar>
-            <div class="btn-group">
-                <label class="btn btn-primary" ng-model="vm.calendarView" uib-btn-radio="'year'">Year</label>
-                <label class="btn btn-primary" ng-model="vm.calendarView" uib-btn-radio="'month'">Month</label>
-                <label class="btn btn-primary" ng-model="vm.calendarView" uib-btn-radio="'week'">Week</label>
-                <label class="btn btn-primary" ng-model="vm.calendarView" uib-btn-radio="'day'">Day</label>
-            </div>
+            <div id="appointmentsCalendar" class="calendar widget" data-ng-include="'app/widgets/calendar.html'"></div>
         </div>
     </div>
 </div>

@@ -1,7 +1,10 @@
-<div data-ng-controller="Shell as vm">
-    <header class="clearfix">
+<div class="layout" data-ng-controller="Shell as vm">
+    <header class="header clearfix">
         <div data-ng-include="'app/layout/header.html'"></div>
     </header>
     <section id="content" class="content" data-ng-view>
     </section>
+    <footer class="footer">
+        <p class="copyright">&copy;2015, <a href="http://damirvazgird.com" target="_blank">Damir Vazgird</a>. Get the code on <a href="https://github.com/amazingBastard/ng-appointments" target="_blank"><i class="fa fa-github"></i> Github</a>.</p>
+    </footer>
 </div>

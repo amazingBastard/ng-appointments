@@ -1,13 +1,54 @@
 /* @TODO: break up into modules/elements/helpers etc... */
 
+/* layout */
+
+.layout {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.layout .content {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 0 auto;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+}
+
 /* header */
 
-.brand-title {
+.header .brand-title {
     font-size: 1.5rem;
+}
+
+/* footer */
+
+.footer .copyright {
+    margin: 0.25em auto;
+    color: #555;
+    font-size: 1rem;
+    text-align: center;
 }
 
 /* views */
 
 .view {
     margin: 5em auto;
+}
+
+/* widgets */
+
+.widget.calendar .calendar-view-buttons {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 0.5em;
+    z-index: 1;
 }

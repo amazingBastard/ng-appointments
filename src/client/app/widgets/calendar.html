@@ -1,0 +1,35 @@
+<div class="btn-group-vertical calendar-view-buttons">
+    <label class="btn btn-primary" ng-model="vm.calendarView" uib-btn-radio="'year'">
+        Year
+    </label>
+    <label class="btn btn-primary" ng-model="vm.calendarView" uib-btn-radio="'month'">
+        Month
+    </label>
+    <label class="btn btn-primary" ng-model="vm.calendarView" uib-btn-radio="'week'">
+        Week
+    </label>
+    <label class="btn btn-primary" ng-model="vm.calendarView" uib-btn-radio="'day'">
+        Day
+    </label>
+</div>
+
+<div class="btn-group calendar-date-buttons">
+    <button class="btn btn-primary" mwl-date-modifier date="vm.calendarDay" decrement="vm.calendarView">
+        Previous
+    </button>
+    <button class="btn btn-default" mwl-date-modifier date="vm.calendarDay" set-to-today>
+        Today
+    </button>
+    <button class="btn btn-primary" mwl-date-modifier date="vm.calendarDay" increment="vm.calendarView">
+        Next
+    </button>
+</div>
+
+<h2 class="text-center calendar-title">{{ vm.calendarTitle }}</h2>
+
+<mwl-calendar
+        view="vm.calendarView"
+        current-day="vm.calendarDay"
+        events="vm.appointments"
+        view-title="vm.calendarTitle">
+</mwl-calendar>
