@@ -5,9 +5,9 @@
         .module('app.appointments')
         .controller('Appointments', Appointments);
 
-    Appointments.$inject = ['$q', 'dataservice', 'logger', 'moment'];
+    Appointments.$inject = ['$q', 'dataservice', 'logger', '$uibModal'];
 
-    function Appointments($q, dataservice, logger, moment) {
+    function Appointments($q, dataservice, logger, $uibModal) {
 
         /*jshint validthis: true */
         var vm = this;
@@ -52,6 +52,16 @@
 
         function showModal(action, event) {
             console.log('open modal ' + event);
+
+            $uibModal.open({
+                templateUrl: 'modalContent.html',
+                controller: function() {
+                    var vm = this;
+                    vm.action = action;
+                    vm.event = event;
+                },
+                controllerAs: 'vm'
+            });
         }
 
         vm.eventClicked = function(event) {
