@@ -34,12 +34,6 @@
             showModal('delete', appointment);
         };
 
-        vm.toggle = function($event, field, event) {
-            $event.preventDefault();
-            $event.stopPropagation();
-            event[field] = !event[field];
-        };
-
         activate();
 
         function activate() {
