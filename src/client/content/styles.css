@@ -55,32 +55,28 @@
     margin: 0;
 }
 
-.widget.calendar .btn-prev {
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
+.widget.calendar .btn-prev,
 .widget.calendar .btn-next {
-    position: absolute;
-    top: 0;
-    right: 0;
+    cursor: pointer;
+    position: relative;
+    top: -2px;
+    padding: 0.5em;
 }
 
-.widget.calendar .btn-today {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    margin: 0.5em;
-    z-index: 1;
-}
-
+.widget.calendar .btn-today,
 .widget.calendar .calendar-view-buttons {
     position: fixed;
     bottom: 0;
-    right: 0;
     margin: 0.5em;
     z-index: 1;
+}
+
+.widget.calendar .btn-today {
+    left: 0;
+}
+
+.widget.calendar .calendar-view-buttons {
+    right: 0;
 }
 
 /* modal */
@@ -108,4 +104,23 @@
     -ms-flex: none;
     flex: none;
     width: 65%;
+    background-color: #222;
+    color: #fff;
+}
+
+.modal-header,
+.modal-footer {
+    border: 0;
+}
+
+.modal-header .close {
+    color: #fff;
+    opacity: 0.5;
+}
+
+.modal-body address {
+    margin: 0;
+    padding: 1em;
+    border: 1px solid #909090;
+    text-align: center;
 }

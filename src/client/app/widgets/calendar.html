@@ -1,12 +1,14 @@
 <div id="appointmentsCalendar" class="calendar widget">
     <div class="widget-header">
-        <button class="btn btn-default btn-prev" mwl-date-modifier date="vm.calendarDay" decrement="vm.calendarView">
-            <i class="fa fa-chevron-left"></i>
-        </button>
-        <h2 class="widget-title">{{ vm.calendarTitle }}</h2>
-        <button class="btn btn-default btn-next" mwl-date-modifier date="vm.calendarDay" increment="vm.calendarView">
-            <i class="fa fa-chevron-right"></i>
-        </button>
+        <h2 class="widget-title">
+            <small class="btn-prev" mwl-date-modifier date="vm.calendarDay" decrement="vm.calendarView">
+                <i class="fa fa-chevron-left"></i>
+            </small>
+            {{ vm.calendarTitle }}
+            <small class="btn-next" mwl-date-modifier date="vm.calendarDay" increment="vm.calendarView">
+                <i class="fa fa-chevron-right"></i>
+            </small>
+        </h2>
     </div>
 
     <mwl-calendar
