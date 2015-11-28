@@ -4,3 +4,25 @@
         </div>
     </div>
 </div>
+
+<!-- Appointment Modal -->
+
+<script type="text/ng-template" id="appointmentModal.html">
+    <div class="modal-header">
+        <button type="button" class="close" ng-click="$close()"><i class="fa fa-times"></i></button>
+        <h3 class="modal-title">{{ vm.appointment.title }}</h3>
+    </div>
+    <div class="modal-body">
+        <p>Service Requested: <strong>{{vm.appointment.service}}</strong></p>
+        <address>
+            <strong>{{vm.appointment.client}}</strong><br />
+            {{vm.appointment.address.street}}<br />
+            {{vm.appointment.address.city}},
+            {{vm.appointment.address.state}},
+            {{vm.appointment.address.zip}}<br />
+        </address>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" ng-click="$close()">Confirm</button>
+    </div>
+</script>

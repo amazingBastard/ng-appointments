@@ -48,7 +48,7 @@
             var appointments = [
                 {
                     id: '4a6d6b81-0cf7-48e5-9251-1d243e20d9f0',
-                    title: 'Chris Canning\'s Blowout',
+                    title: 'Chris Canning\'s New Look',
                     client: 'Chris Canning',
                     service: 'BLOWOUT',
                     address: {

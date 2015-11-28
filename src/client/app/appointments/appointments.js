@@ -22,24 +22,16 @@
         vm.editEventIcon = '<\i class=\'fa fa-pencil\'\></i>';
         vm.deleteEventIcon = '<\i class=\'fa fa-times\'\></i>';
 
-        vm.dayViewStart = '06:00';
-        vm.dayViewEnd = '22:00';
-        vm.dayViewSplit = '30';
-
-        vm.eventClicked = function(event) {
-            showModal('Clicked', event);
+        vm.eventDetails = function(appointment) {
+            showModal('details', appointment);
         };
 
-        vm.eventEdited = function(event) {
-            showModal('Edited', event);
+        vm.eventEdit = function(appointment) {
+            showModal('edit', appointment);
         };
 
-        vm.eventDeleted = function(event) {
-            showModal('Deleted', event);
-        };
-
-        vm.eventTimesChanged = function(event) {
-            showModal('Dropped or resized', event);
+        vm.eventDelete = function(appointment) {
+            showModal('delete', appointment);
         };
 
         vm.toggle = function($event, field, event) {
@@ -75,13 +67,13 @@
             });
         }
 
-        function showModal(action, event) {
+        function showModal(type, appointment) {
             $uibModal.open({
-                templateUrl: 'calendarModal.html',
+                templateUrl: 'appointmentModal.html',
                 controller: function() {
                     var vm = this;
-                    vm.action = action;
-                    vm.event = event;
+                    vm.type = type;
+                    vm.appointment = appointment;
                 },
                 controllerAs: 'vm'
             });
