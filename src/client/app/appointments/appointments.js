@@ -77,7 +77,7 @@
 
         function showModal(action, event) {
             $uibModal.open({
-                templateUrl: 'modalContent.html',
+                templateUrl: 'calendarModal.html',
                 controller: function() {
                     var vm = this;
                     vm.action = action;
