@@ -48,17 +48,37 @@
             var appointments = [
                 {
                     id: '4a6d6b81-0cf7-48e5-9251-1d243e20d9f0',
-                    title: 'Chris Canning\'s BLOWOUT',
-                    type: 'important',
+                    title: 'Chris Canning\'s Blowout',
+                    client: 'Chris Canning',
+                    service: 'BLOWOUT',
+                    address: {
+                        street: '123 Fake Street',
+                        city: 'New York',
+                        state: 'NY',
+                        zip: '11001'
+                    },
+                    type: 'info',
+                    vip: true,
                     startsAt: moment().subtract(2, 'day').toDate(),
+                    isCancelled: false,
                     draggable: true,
                     resizable: true
                 },
                 {
                     id: '4a6d6b81-0cf7-48e5-9251-1d243e20d9f9',
-                    title: 'MAKEUP W/LASHES for Christina Ray',
-                    type: 'info',
+                    title: 'Makeover for Christina Ray',
+                    client: 'Christina Ray',
+                    service: 'MAKEUP W/LASHES',
+                    address: {
+                        street: '456 Fake Street',
+                        city: 'New York',
+                        state: 'NY',
+                        zip: '11011'
+                    },
+                    type: 'warning',
+                    vip: false,
                     startsAt: moment().subtract(1, 'day').toDate(),
+                    isCancelled: false,
                     draggable: true,
                     resizable: true
                 }

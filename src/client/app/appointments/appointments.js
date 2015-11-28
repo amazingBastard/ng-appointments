@@ -14,14 +14,39 @@
 
         vm.appointmentsCount = 0;
         vm.appointments = [];
+
+        vm.calendarTitle = 'Appointments';
         vm.calendarView = 'week';
         vm.calendarDay = new Date();
-        vm.calendarTitle = 'Appointments';
+
         vm.editEventIcon = '<\i class=\'fa fa-pencil\'\></i>';
         vm.deleteEventIcon = '<\i class=\'fa fa-times\'\></i>';
+
         vm.dayViewStart = '06:00';
         vm.dayViewEnd = '22:00';
         vm.dayViewSplit = '30';
+
+        vm.eventClicked = function(event) {
+            showModal('Clicked', event);
+        };
+
+        vm.eventEdited = function(event) {
+            showModal('Edited', event);
+        };
+
+        vm.eventDeleted = function(event) {
+            showModal('Deleted', event);
+        };
+
+        vm.eventTimesChanged = function(event) {
+            showModal('Dropped or resized', event);
+        };
+
+        vm.toggle = function($event, field, event) {
+            $event.preventDefault();
+            $event.stopPropagation();
+            event[field] = !event[field];
+        };
 
         activate();
 
@@ -51,8 +76,6 @@
         }
 
         function showModal(action, event) {
-            console.log('open modal ' + event);
-
             $uibModal.open({
                 templateUrl: 'modalContent.html',
                 controller: function() {
@@ -63,27 +86,5 @@
                 controllerAs: 'vm'
             });
         }
-
-        vm.eventClicked = function(event) {
-            showModal('Clicked', event);
-        };
-
-        vm.eventEdited = function(event) {
-            showModal('Edited', event);
-        };
-
-        vm.eventDeleted = function(event) {
-            showModal('Deleted', event);
-        };
-
-        vm.eventTimesChanged = function(event) {
-            showModal('Dropped or resized', event);
-        };
-
-        vm.toggle = function($event, field, event) {
-            $event.preventDefault();
-            $event.stopPropagation();
-            event[field] = !event[field];
-        };
     }
 })();
